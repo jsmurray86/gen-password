@@ -1,6 +1,15 @@
 // Assignment code here
 
-
+function generatePassword(){
+  var passwordLength = prompt("Enter password length between 8-128"); 
+  passwordLength= parseInt(passwordLength);
+  if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
+    alert ("Password length doesn't meet criteria. Please provide a number 8 and 128");
+    generatePassword();
+  }
+  console.log ("Password length = ", passwordLength);
+  
+}
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
@@ -19,16 +28,16 @@ generateBtn.addEventListener("click", writePassword);
 
 /* My thoughts on code below. Just brainstorming here. I think we need the following. Not clear on specifics*/
 /* do var as array or string?*/
-var pswdChars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+// var pswdChars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
 
-var length = 12 /*Arbitrary # I picked for length of password*/
+// var length = 12 /*Arbitrary # I picked for length of password*/
 
-var index = Math.floor(Math.random() * pswdChars.length);
-var computerChoice = pswdChars[index];
+// var index = Math.floor(Math.random() * pswdChars.length);
+// var computerChoice = pswdChars[index];
 
-/* Do we prompt user for each type of input or use computerChoice to generate from letters/numbers/special characters?*/
-window.prompt("Click to generate a secure password.");
+// /* Do we prompt user for each type of input or use computerChoice to generate from letters/numbers/special characters?*/
+// window.prompt("Click to generate a secure password.");
 
-window.alert("Your new password is" + computerChoice);
+// window.alert("Your new password is" + computerChoice);
 
-document.getElementById
+// document.getElementById

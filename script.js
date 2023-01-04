@@ -17,6 +17,13 @@ function generatePassword(){
     pswdChars += lowerCase;
     console.log ("pswdChars = ", pswdChars);
   }
+
+  var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var includeUC = confirm ("Press OK to include upper case in password.");
+  if (includeUC) {
+    pswdChars += upperCase;
+    console.log ("pswdChars = ", pswdChars);
+  }
 }
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");

@@ -31,6 +31,13 @@ function generatePassword(){
     pswdChars += numbers;
     console.log ("pswdChars = ", pswdChars);
   }
+
+  var special = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+  var includeSp = confirm ("Press OK to include special characters in password.");
+  if (includeSp) {
+    pswdChars += special;
+    console.log ("pswdChars = ", pswdChars);
+  }
 }
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");

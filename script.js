@@ -8,7 +8,15 @@ function generatePassword(){
     generatePassword();
   }
   console.log ("Password length = ", passwordLength);
-  
+  var pswdChars = ""; 
+  //initial empty string//
+
+  var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+  var includeLC = confirm ("Press OK to include lower case in password.");
+  if (includeLC) {
+    pswdChars += lowerCase;
+    console.log ("pswdChars = ", pswdChars);
+  }
 }
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
